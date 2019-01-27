@@ -1,0 +1,28 @@
+.list
+    float: right
+    padding: 0
+    margin: 10px 0
+    li, a
+        display: inline-block
+        text-decoration: none
+        color: #989898
+    li
+        margin-right: 30px
+    li:last-child
+        margin-right: 0
+    .active
+        color: black !important
+    .line
+        position: relative
+        display: inline-block
+        width: 25px
+        height: 10px
+        color: black
+        margin-right: 30px
+    .line::after
+        position: absolute
+        content: ""
+        border-bottom: 3px solid black
+        display: block
+        width: 100%
+        top: 30%
