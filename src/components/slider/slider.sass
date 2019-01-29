@@ -21,17 +21,17 @@
         outline: none
 
     .arrows.prev 
-        left: 0
+        left: 15px
 
     .arrows.prev:hover 
         opacity: 0.7
-        left: -10px
+        left: 5px
 
     .arrows.next 
-        right: 0
+        right: 15px
 
     .arrows.next:hover 
-        right: -10px
+        right: 5px
         opacity: 0.7
 
     .dots-container 
@@ -42,27 +42,40 @@
         width: auto
         text-align: center
         left: 50%
-        bottom: 9px
+        bottom: 58px
         transform: translateX(-50%)
         z-index: 10
         list-style-type: none
 
-    .dots-container 
         li 
             display: inline-block
             padding: 5px
+            width: 7px
+            height: 7px
+            background: white
+            border-radius: 50%
+            margin-right: 5px
 
-    .dots-container 
-        li.active 
-            a 
-                color: #00d8ff
+        li.active
+            background: black
+            position: relative
 
-    .dots-container 
+        li.active
+            a
+                display: inline-block
+                width: 7px
+                height: 7px
+                position: absolute
+                background: white
+                top: 5px
+                border-radius: 50%
+                left: 5px
+                transition: .2s
+
         li 
             a 
                 color: #fff
 
-    .dots-container 
         li 
             a:hover 
                 text-decoration: none
