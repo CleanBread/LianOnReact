@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './home.sass';
+
 import Slider from '../slider/Slider'
 
 
