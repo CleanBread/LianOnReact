@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import './slider.sass';
 import Slide_1 from '../../img/header-slide1.jpg';
 import Slide_2 from '../../img/header-slide2.jpg';
-import Slide_3 from '../../img/home-7.jpg';
+// import Slide_3 from '../../img/home-7.jpg';
 
 class Slider extends Component {
     constructor(props) {
@@ -11,14 +11,18 @@ class Slider extends Component {
         this.state = {
             slides: [
                 {
-                    eachSlide: `url(${Slide_1})`
+                    eachSlide: `url(${Slide_1})`,
+                    headline: 'Lian Creative Agency',
+                    sentence: 'Minimal Freelance Portfolio'
                 },
                 {
-                    eachSlide: `url(${Slide_2})`
-                },
-                {
-                    eachSlide: `url(${Slide_3})`
+                    eachSlide: `url(${Slide_2})`,
+                    headline: 'Design & Branding',
+                    sentence: 'We Deliver Quality Results'
                 }
+            //     {
+            //         eachSlide: `url(${Slide_3})`
+            //     }
             ],
             autoplay: false,
             active: 0,
@@ -103,9 +107,15 @@ class Slider extends Component {
 
         return this.state.slides.map((item, index) => (
             <div
-                className= "each-slide" 
+                className= "each-slide slide" 
                 key = {index} 
                 style = {{backgroundImage: item.eachSlide, width: transition}}>
+                <div className="slide-content">
+                    <div className="headline">
+                        <span>{item.headline}</span>
+                    </div>
+                    <span className="sentence">{item.sentence}</span>
+                </div>
             </div>
         ))
     }
@@ -117,7 +127,7 @@ class Slider extends Component {
             key = {index}
             ref = "dots"
             onClick = {this.dots.bind(this, index)}>
-                <a></a>
+                <span></span>
             </li>
         ))
     }

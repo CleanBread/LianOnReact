@@ -55,13 +55,14 @@
             background: white
             border-radius: 50%
             margin-right: 5px
+            cursor: pointer
 
         li.active
             background: black
             position: relative
 
         li.active
-            a
+            span
                 display: inline-block
                 width: 7px
                 height: 7px
@@ -73,13 +74,12 @@
                 transition: .2s
 
         li 
-            a 
+            span 
                 color: #fff
 
         li 
-            a:hover 
+            span:hover 
                 text-decoration: none
-                opacity: 0.7
                 cursor: pointer
 
     .toggle-play 
@@ -97,10 +97,29 @@
         cursor: pointer
 
     .each-slide 
-        width: 555px
+        // position: relative
         height: 100%
+        display: flex
+        justify-content: center
+        align-items: center
         float: left
         text-align: center
         background-size: cover
         background-position: center center
         background-color: transparent
+        .slide-content
+            display: flex
+            flex-direction: column
+            font-family: RobotoLight
+            text-transform: uppercase
+            .headline
+                background: black
+                color: white
+                font-size: 48px
+                span
+                    margin: 0 45px
+                    letter-spacing: 2px
+            .sentence
+                font-size: 18px
+                margin-top: 35px
+                letter-spacing: 5px
