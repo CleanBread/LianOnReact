@@ -1,21 +1,21 @@
 import React, { Component } from 'react';
 import './navItem.sass';
-import { Link } from 'react-router-dom'
+import { NavLink as Link } from 'react-router-dom';
 
 class NavItem extends Component {
     render() {
         return (
             <>
                 <ul className="list">
-                    <li className="active">
+                    <li>
                         <span className="line"></span>
-                        <Link to="/">HOME</Link>
+                        <Link onlyActiveOnIndex={true} to="/" activeClassName="active">HOME</Link>
                     </li>
                     <li>
-                        <Link to="/about">ABOUT</Link>
+                        <Link to="/about" activeClassName="active">ABOUT</Link>
                     </li>
                     <li>
-                        <Link to="/contact">CONTACT</Link>
+                        <Link to="/contact" activeClassName="active">CONTACT</Link>
                     </li>
                 </ul>
             </>

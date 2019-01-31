@@ -14,7 +14,7 @@ class Footer extends Component {
                 </div>
                 <div className="footer__inf">
                     <div className="autors">© 2016 Mulitix Theme by ThemeForces. All Rights Reserved.</div>
-                    <div>Code by <a href="https://github.com/CleanBread" className="coder" target="_blank">CleanBread</a></div>
+                    <div>Code by <a href="https://github.com/CleanBread" className="coder" target="_blank" rel="noopener noreferrer">CleanBread</a></div>
                 </div>
             </div>
         );

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './logo.sass';
 
-import { Link } from 'react-router-dom'
+import { NavLink as Link } from 'react-router-dom';
 import logo from '../../img/logo.png'
 
 class Logo extends Component {
