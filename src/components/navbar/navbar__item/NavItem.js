@@ -9,7 +9,7 @@ class NavItem extends Component {
                 <ul className="list">
                     <li>
                         <span className="line"></span>
-                        <Link onlyActiveOnIndex={true} to="/" activeClassName="active">HOME</Link>
+                        <Link exact to="/" activeClassName="active">HOME</Link>
                     </li>
                     <li>
                         <Link to="/about" activeClassName="active">ABOUT</Link>
