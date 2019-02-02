@@ -6,18 +6,10 @@ class NavItem extends Component {
     render() {
         return (
             <>
-                <ul className="list">
-                    <li>
-                        <span className="line"></span>
-                        <Link exact to="/" activeClassName="active">HOME</Link>
-                    </li>
-                    <li>
-                        <Link to="/about" activeClassName="active">ABOUT</Link>
-                    </li>
-                    <li>
-                        <Link to="/contact" activeClassName="active">CONTACT</Link>
-                    </li>
-                </ul>
+            <li>
+                <span className={this.props.span}></span>
+                <Link exact={this.props.exact} to={this.props.to} activeClassName="active">{this.props.name}</Link>
+            </li>
             </>
         );
     }

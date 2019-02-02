@@ -6,7 +6,11 @@ class Navbar extends Component {
     render() {
         return (
             <>
-            <NavbarItem/>
+            <ul className="list">
+                <NavbarItem exact to="/" name="HOME" span="line"/>
+                <NavbarItem to="/about" name="ABOUT"/>
+                <NavbarItem to="/contact" name="CONTACT"/>
+            </ul>
             </>
         );
     }
