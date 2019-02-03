@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './list-item.sass';
 
+
 class ListItem extends Component {
     constructor(props) {
         super(props);

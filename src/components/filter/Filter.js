@@ -3,6 +3,7 @@ import './filter.sass';
 
 import FilterNav from './filter-nav/FilterNav'
 import ListItem from './filter-nav/list-item/ListItem'
+import ItemBox from './item-box/ItemBox'
 
 class Filter extends Component {
     
@@ -19,6 +20,7 @@ class Filter extends Component {
                     <ListItem>UX/IX</ListItem>
                     <ListItem>Branding</ListItem>
                 </FilterNav>
+                <ItemBox/>
             </div>
         );
     }
