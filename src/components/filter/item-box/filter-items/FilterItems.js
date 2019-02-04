@@ -77,7 +77,7 @@ class FilterItems extends Component {
 
     render() {
         return (
-            <div className="item-box" onClick={() => { this.props.updateData(this.filterLogo())}}>
+            <div className="item-box" onClick={() => { this.props.updateData(this.filterLogo)}}>
                 {this.renderItems()}
             </div>
         );
