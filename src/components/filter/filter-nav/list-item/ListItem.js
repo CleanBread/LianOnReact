@@ -9,7 +9,12 @@ class ListItem extends Component {
             
         }
         this.onItemClick = this.onItemClick.bind(this);
+        this.filterLogo = this.filterLogo.bind(this);
     }
+
+    filterLogo(slides, cond) {
+        return slides.filter(item => item.status === cond)
+    };
 
     onItemClick(event) {
         event.preventDefault();
@@ -20,11 +25,15 @@ class ListItem extends Component {
         });
 
         event.currentTarget.style.color = 'black';
+        
+        this.props.updateData(this.filterLogo(this.props.slides, this.props.name));
     }
     render() {
         return (
             <>
-            <li className="nav-list-item" onClick={this.onItemClick}><span>{this.props.children}</span></li>
+            <li className="nav-list-item" onClick={this.onItemClick}>
+                <span>{this.props.children}</span>
+            </li>
             </>
         );
     }
