@@ -56,12 +56,17 @@ class Filter extends Component {
                     eachSlide: `url(${Item_9})`,
                     status: 'branding'
                 }
-            ]
+            ],
+            dop: ''
         }
     }
 
+    componentDidMount() {
+        this.setState({dop: this.state.slides});
+    }
+
     updateData = (value) => {
-        this.setState({ slides: value })
+        this.setState({ slides: value });
     }
     
 
@@ -69,13 +74,13 @@ class Filter extends Component {
         return (
             <div className="filter-container">
                 <FilterNav>
-                    <ListItem updateData={this.updateData} slides={this.state.slides} name="all">All</ListItem>
-                    <ListItem updateData={this.updateData} slides={this.state.slides} name="logo">Logo</ListItem>
-                    <ListItem updateData={this.updateData} slides={this.state.slides} name="mobile">Mobile App</ListItem>
-                    <ListItem updateData={this.updateData} slides={this.state.slides} name="wordpress">WordPress</ListItem>
-                    <ListItem updateData={this.updateData} slides={this.state.slides} name="webDesign">Web Design</ListItem>
-                    <ListItem updateData={this.updateData} slides={this.state.slides} name="ux/ix">UX/IX</ListItem>
-                    <ListItem updateData={this.updateData} slides={this.state.slides} name="branding">Branding</ListItem>
+                    <ListItem updateData={this.updateData} slides={this.state.dop} name="all">All</ListItem>
+                    <ListItem updateData={this.updateData} slides={this.state.dop} name="logo">Logo</ListItem>
+                    <ListItem updateData={this.updateData} slides={this.state.dop} name="mobile">Mobile App</ListItem>
+                    <ListItem updateData={this.updateData} slides={this.state.dop} name="wordpress">WordPress</ListItem>
+                    <ListItem updateData={this.updateData} slides={this.state.dop} name="webDesign">Web Design</ListItem>
+                    <ListItem updateData={this.updateData} slides={this.state.dop} name="ux/ix">UX/IX</ListItem>
+                    <ListItem updateData={this.updateData} slides={this.state.dop} name="branding">Branding</ListItem>
                 </FilterNav>
                 <ItemBox slides={this.state.slides}/>
             </div>

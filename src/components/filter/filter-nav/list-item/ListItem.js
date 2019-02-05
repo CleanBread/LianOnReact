@@ -13,6 +13,9 @@ class ListItem extends Component {
     }
 
     filterLogo(slides, cond) {
+        if (cond === 'all') {
+            return slides
+        }
         return slides.filter(item => item.status === cond)
     };
 
