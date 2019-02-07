@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import './title.sass';
 
+import Subheading from '../subheading/Subheading'
+
 class Title extends Component {
     render() {
         return (
@@ -9,9 +11,7 @@ class Title extends Component {
                     <div className="title__headline">
                         <span>{this.props.headline}</span>
                     </div>
-                    <span className="title__sentence">
-                        {this.props.sent}
-                    </span>
+                    <Subheading subheading={this.props.sent}/>
                 </div>
             </div>
         );

@@ -1,0 +1,55 @@
+.skill
+    display: flex
+    flex-direction: column
+    font-family: RobotoBold
+    position: relative
+    margin-bottom: 20px
+    &__name
+        display: inline-block
+    &__progress
+        height: 15px
+        background-color: #ebebeb
+        margin-top: 20px
+        position: relative
+    &__line
+        margin-left: 5px
+        margin-bottom: 8px
+        display: inline-block
+        height: 3px
+        background-color: #a1a1a1
+    .dot
+        position: relative
+        display: inline-block
+        width: 15px
+        height: 15px
+        border-radius: 50%
+        background: black
+        margin-bottom: 3px
+        margin-left: -12px
+        &__white
+            position: absolute
+            top: 38%
+            left: 33%
+            display: inline-block
+            width: 5px
+            height: 5px
+            background: white
+            border-radius: 50%
+    .cloud
+        width: 40px
+        height: 20px
+        background: black
+        display: inline-block
+        position: absolute
+        color: white
+        text-align: center
+        .proc
+            font-size: 12px
+    .triangle
+        display: inline-block
+        width: 0px
+        top: 20px
+        height: 0px
+        border: 4px solid
+        border-color: black transparent transparent black
+        position: absolute
