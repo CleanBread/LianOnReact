@@ -16,6 +16,10 @@ class FilterItems extends Component {
                 className= "filter-item" 
                 key = {index} 
                 style = {{backgroundImage: item.eachSlide}}>
+                <div className="item-active">
+                    <span className="gor"></span>
+                    <span className="vert"></span>
+                </div>
             </div>
         ))
     }

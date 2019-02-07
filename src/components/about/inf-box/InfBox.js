@@ -8,7 +8,6 @@ class InfBox extends Component {
         return (
             <div className="inf-box">
                 <div className="image-box" style={{backgroundImage: `url(${img})`}}></div>
-                {/* <img src="../../../about_content.jpg" alt=""/> */}
             </div>
         );
     }
