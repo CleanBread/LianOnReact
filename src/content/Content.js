@@ -16,6 +16,7 @@ class Content extends Component {
                         <Route path="/" exact component={ Home } />
                         <Route path="/about" exact component={ About } />
                         <Route path="/contact" exact component={ Contact } />
+                        {/* <Route path="/:name" exact component={ } />  */}
                     </Switch>
                 </Router>
             </>

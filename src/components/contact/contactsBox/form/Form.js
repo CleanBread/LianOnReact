@@ -9,7 +9,7 @@ class Form extends Component {
     render() {
         return (
             <div className="form-box">
-                <form action="" className="form" target="_blank" action="https://formspree.io/for.spam.from.fortfolio@gmail.com" method="POST">
+                <form className="form" target="_blank" action="https://formspree.io/for.spam.from.fortfolio@gmail.com" method="POST">
                     <div className="form__inputs">
                         <Input type="text" placeholder="Name" name="name"/>
                         <Input type="email" placeholder="Email" name="email"/>
