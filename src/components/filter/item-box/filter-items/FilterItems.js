@@ -1,14 +1,9 @@
 import React, { Component } from 'react';
 import './filter-items.sass';
 
-class FilterItems extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            slides: this.props.slides
-        }
-    }
+import { NavLink as Link } from 'react-router-dom';
 
+class FilterItems extends Component {
 
     renderItems() {
         return this.props.slides.map((item, index) => (
@@ -16,10 +11,13 @@ class FilterItems extends Component {
                 className= "filter-item" 
                 key = {index} 
                 style = {{backgroundImage: item.eachSlide}}>
+                
+            <Link to={`/portfolio/${item.to}`} style={{width: '100%', height: '100%'}}>
                 <div className="item-active">
                     <span className="gor"></span>
                     <span className="vert"></span>
                 </div>
+                </Link>
             </div>
         ))
     }

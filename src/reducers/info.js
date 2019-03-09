@@ -12,39 +12,48 @@ const mainState = {
     slides: [
         {
             eachSlide: `url(${Item_1})`,
-            status: 'logo'
+            status: 'logo',
+            to: '0'
         },
         {
             eachSlide: `url(${Item_2})`,
-            status: 'mobile'
+            status: 'mobile',
+            to: '1'
         },
         {
             eachSlide: `url(${Item_3})`,
-            status: 'wordpress'
+            status: 'wordpress',
+            to: '2'
         },
         {
             eachSlide: `url(${Item_4})`,
-            status: 'logo'
+            status: 'logo',
+            to: '3'
         },
         {
             eachSlide: `url(${Item_5})`,
-            status: 'wordpress'
+            status: 'wordpress',
+            to: '4'
         },
         {
             eachSlide: `url(${Item_6})`,
-            status: 'webDesign'
+            status: 'webDesign',
+            to: '5'
         },
         {
             eachSlide: `url(${Item_7})`,
-            status: 'ux/ix'
+            status: 'ux/ix',
+            to: '6'
         },
         {
             eachSlide: `url(${Item_8})`,
-            status: 'branding'
+            status: 'branding',
+            to: '7'
         },
         {
             eachSlide: `url(${Item_9})`,
-            status: 'branding'
+            status: 'branding',
+            to: '8'
         }
     ]
 }
