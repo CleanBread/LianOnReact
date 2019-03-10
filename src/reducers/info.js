@@ -13,7 +13,13 @@ const mainState = {
         {
             eachSlide: `url(${Item_1})`,
             status: 'logo',
-            to: '0'
+            to: '0',
+            headline: 'Pereira Creative Agency',
+            subheading: 'Branding Design',
+            date: 'February 28, 2015',
+            text: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit.',
+            role: 'Project Designer, Lead Designer, Markerting Head',
+            tags: 'Mobile App, UI/UX design'
         },
         {
             eachSlide: `url(${Item_2})`,
