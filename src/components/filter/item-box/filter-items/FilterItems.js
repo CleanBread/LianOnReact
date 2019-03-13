@@ -12,11 +12,11 @@ class FilterItems extends Component {
                 key = {index} 
                 style = {{backgroundImage: item.eachSlide}}>
                 
-            <Link to={`/portfolio/${item.to}`} style={{width: '100%', height: '100%'}}>
-                <div className="item-active">
-                    <span className="gor"></span>
-                    <span className="vert"></span>
-                </div>
+                <Link to={`/portfolio/${item.to}`} style={{width: '100%', height: '100%'}}>
+                    <div className="item-active">
+                        <span className="gor"></span>
+                        <span className="vert"></span>
+                    </div>
                 </Link>
             </div>
         ))

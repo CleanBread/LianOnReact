@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
 import './project.sass';
 import { connect } from 'react-redux'
+import { NavLink as Link } from 'react-router-dom';
 
 import title_img from '../../img/project_title.png'
+
 
 import Title from '../titile/Title'
 
@@ -12,16 +14,66 @@ class Project extends Component {
         this.state = {
             slide: this.props.slides[this.props.match.params.number]
         }
+        
+        this.prev = this.prev.bind(this);
+        this.next = this.next.bind(this);
+        this.upd = this.upd.bind(this);
+    }
+
+    prev() {
+        this.props.match.params.number--;
+        this.setState({slide: this.props.slides[this.props.match.params.number]})
+    }
+
+    next() {
+        this.props.match.params.number++;
+        this.setState({slide: this.props.slides[this.props.match.params.number]})
+    }
+
+    componentDidUpdate() {
+        this.upd()
+        console.log("did upd " + this.props.match.params.number)
+    }
+
+    upd() {
+        
+        let prev = document.querySelector('.prev');
+        let next = document.querySelector('.next');
+
+        +this.props.match.params.number === 0 ? prev.style.display = 'none' : prev.style.display = 'inline-block';
+
+        +this.props.match.params.number === 8 ? next.style.display = 'none' : next.style.display = 'inline-block';
+    }
+
+    componentWillMount() {
+        window.onhashchange = (e) => {
+            e.preventDefault();
+            this.setState({slide: this.props.slides[+this.props.match.params.number]})
+        }
+        
     }
 
     componentDidMount() {
         window.scroll(0, 0);
+
+        this.upd();
     };
+
+    componentWillUnmount() {
+    }
 
     render() {
         return (
             <div className="project__container">
                 <Title image={`url(${title_img})`} headline="LATEST PROJECTS" sent="We Deliver Quality"/>
+                <div className="prev-next">
+                    <Link to={`/portfolio/${+this.props.match.params.number - 1}`} onClick={this.prev}>
+                        <span className="prev">PREVIOUS</span>
+                    </Link>
+                    <Link to={`/portfolio/${+this.props.match.params.number + 1}`} onClick={this.next}>
+                        <span className="next">NEXT</span>
+                    </Link>
+                </div>
                 <div className="project__inf-container">
                     <div className="inf">
                         <div className="inf__head">

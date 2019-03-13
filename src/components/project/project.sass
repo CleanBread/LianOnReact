@@ -2,6 +2,17 @@
     &__container
         display: flex
         flex-direction: column
+        .prev-next
+            margin: 10px 120px
+            position: relative
+            .prev
+                display: inline-block
+                position: absolute
+                left: 0
+            .next
+                display: inline-block
+                position: absolute
+                left: 100px
     &__inf-container
         display: flex
         margin: 40px 120px
@@ -44,12 +55,13 @@
             &__role
                 display: flex
                 flex-direction: column
+                margin-top: 20px
                 .whitch
                     font-family: RobotoBold
                     margin-bottom: 15px
                 .roles
                     color: #989898
-                    margin-bottom: 40px
+                    margin-bottom: 60px
                 
         .image
             width: 40%
