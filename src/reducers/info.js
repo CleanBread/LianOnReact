@@ -8,8 +8,12 @@ import Item_7 from '../img/body-7.jpg';
 import Item_8 from '../img/body-8.jpg';
 import Item_9 from '../img/body-9.jpg';
 
+
+import Slide_1 from '../img/header-slide1.jpg';
+import Slide_2 from '../img/header-slide2.jpg';
+
 const mainState = {
-    slides: [
+    projects: [
         {
             eachSlide: `url(${Item_1})`,
             status: 'logo',
@@ -109,7 +113,19 @@ const mainState = {
             role: 'Project Designer, Lead Designer, Markerting Head',
             tags: 'Branding, UI/UX Design'
         }
-    ]
+    ],
+    slider: [
+        {
+            eachSlide: `url(${Slide_1})`,
+            headline: 'Lian Creative Agency',
+            sentence: 'Minimal Freelance Portfolio'
+        },
+        {
+            eachSlide: `url(${Slide_2})`,
+            headline: 'Design & Branding',
+            sentence: 'We Deliver Quality Results'
+        }
+    ],
 }
 
 export default function slideInfo(state = mainState) {

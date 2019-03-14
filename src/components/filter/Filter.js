@@ -11,12 +11,12 @@ class Filter extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            slides: this.props.slides
+            projects: this.props.projects
         }
     }
 
     updateData = (value) => {
-        this.setState({ slides: value });
+        this.setState({ projects: value });
     }
     
 
@@ -24,15 +24,15 @@ class Filter extends Component {
         return (
             <div className="filter-container">
                 <FilterNav>
-                    <ListItem updateData={this.updateData} slides={this.props.slides} name="all">All</ListItem>
-                    <ListItem updateData={this.updateData} slides={this.props.slides} name="logo">Logo</ListItem>
-                    <ListItem updateData={this.updateData} slides={this.props.slides} name="mobile">Mobile App</ListItem>
-                    <ListItem updateData={this.updateData} slides={this.props.slides} name="wordpress">WordPress</ListItem>
-                    <ListItem updateData={this.updateData} slides={this.props.slides} name="webDesign">Web Design</ListItem>
-                    <ListItem updateData={this.updateData} slides={this.props.slides} name="ux/ix">UX/IX</ListItem>
-                    <ListItem updateData={this.updateData} slides={this.props.slides} name="branding">Branding</ListItem>
+                    <ListItem updateData={this.updateData} projects={this.props.projects} name="all">All</ListItem>
+                    <ListItem updateData={this.updateData} projects={this.props.projects} name="logo">Logo</ListItem>
+                    <ListItem updateData={this.updateData} projects={this.props.projects} name="mobile">Mobile App</ListItem>
+                    <ListItem updateData={this.updateData} projects={this.props.projects} name="wordpress">WordPress</ListItem>
+                    <ListItem updateData={this.updateData} projects={this.props.projects} name="webDesign">Web Design</ListItem>
+                    <ListItem updateData={this.updateData} projects={this.props.projects} name="ux/ix">UX/IX</ListItem>
+                    <ListItem updateData={this.updateData} projects={this.props.projects} name="branding">Branding</ListItem>
                 </FilterNav>
-                <ItemBox slides={this.state.slides}/>
+                <ItemBox projects={this.state.projects}/>
             </div>
         );
     }
@@ -40,7 +40,7 @@ class Filter extends Component {
 
 function mapStateToProps(state) {
     return {
-        slides: state.slideInfo.slides
+        projects: state.slideInfo.projects
     }
 }
 

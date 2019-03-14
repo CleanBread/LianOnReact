@@ -12,7 +12,7 @@ class Project extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            slide: this.props.slides[this.props.match.params.number]
+            slide: this.props.projects[this.props.match.params.number]
         }
         
         this.prev = this.prev.bind(this);
@@ -22,12 +22,12 @@ class Project extends Component {
 
     prev() {
         this.props.match.params.number--;
-        this.setState({slide: this.props.slides[this.props.match.params.number]})
+        this.setState({slide: this.props.projects[this.props.match.params.number]})
     }
 
     next() {
         this.props.match.params.number++;
-        this.setState({slide: this.props.slides[this.props.match.params.number]})
+        this.setState({slide: this.props.projects[this.props.match.params.number]})
     }
 
     componentDidUpdate() {
@@ -48,7 +48,7 @@ class Project extends Component {
     componentWillMount() {
         window.onhashchange = (e) => {
             e.preventDefault();
-            this.setState({slide: this.props.slides[+this.props.match.params.number]})
+            this.setState({slide: this.props.projects[+this.props.match.params.number]})
         }
         
     }
@@ -101,7 +101,7 @@ class Project extends Component {
 
 function mapStateToProps(state) {
     return {
-        slides: state.slideInfo.slides
+        projects: state.slideInfo.projects
     }
 }
 

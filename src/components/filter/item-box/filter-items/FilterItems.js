@@ -6,7 +6,7 @@ import { NavLink as Link } from 'react-router-dom';
 class FilterItems extends Component {
 
     renderItems() {
-        return this.props.slides.map((item, index) => (
+        return this.props.projects.map((item, index) => (
             <div
                 className= "filter-item" 
                 key = {index} 

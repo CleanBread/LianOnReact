@@ -8,7 +8,7 @@ class ItemBox extends Component {
     render() {
         return (
             <div className="item-box">
-                <FilterItems slides={this.props.slides}/>
+                <FilterItems projects={this.props.projects}/>
             </div>
         );
     }

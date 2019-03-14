@@ -12,11 +12,11 @@ class ListItem extends Component {
         this.filterLogo = this.filterLogo.bind(this);
     }
 
-    filterLogo(slides, cond) {
+    filterLogo(projects, cond) {
         if (cond === 'all') {
-            return slides
+            return projects
         }
-        return slides.filter(item => item.status === cond)
+        return projects.filter(item => item.status === cond)
     };
 
     onItemClick(event) {
@@ -29,7 +29,7 @@ class ListItem extends Component {
 
         event.currentTarget.style.color = 'black';
         
-        this.props.updateData(this.filterLogo(this.props.slides, this.props.name));
+        this.props.updateData(this.filterLogo(this.props.projects, this.props.name));
     }
     render() {
         return (

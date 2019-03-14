@@ -1,56 +1,21 @@
 import React, { Component } from 'react';
-
 import './slider.sass';
-import Slide_1 from '../../img/header-slide1.jpg';
-import Slide_2 from '../../img/header-slide2.jpg';
-// import Slide_3 from '../../img/home-7.jpg';
+
+import { connect } from 'react-redux'
 
 class Slider extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            slides: [
-                {
-                    eachSlide: `url(${Slide_1})`,
-                    headline: 'Lian Creative Agency',
-                    sentence: 'Minimal Freelance Portfolio'
-                },
-                {
-                    eachSlide: `url(${Slide_2})`,
-                    headline: 'Design & Branding',
-                    sentence: 'We Deliver Quality Results'
-                }
-            //     {
-            //         eachSlide: `url(${Slide_3})`
-            //     }
-            ],
+            slider: this.props.slider,
             autoplay: false,
             active: 0,
             max: 0
         }
-        this.state.max = this.state.slides.length;
-        // this.intervalBetweenSlides = this.intervalBetweenSlides.bind(this);
+        this.state.max = this.state.slider.length;
         this.nextOne = this.nextOne.bind(this);
         this.prevOne = this.prevOne.bind(this);
     }
-    // componentDidMount() {
-    //     this.interval = setInterval(() => this.intervalBetweenSlides(), 3000)
-    // }
-    // componentWillUnmount() {
-    //     clearInterval(this.interval);
-    // }
-
-    // intervalBetweenSlides() {
-    //     if(this.state.active === this.state.max - 1) {
-    //         this.state.active = 0;
-    //     }else {
-    //         this.state.active++;
-    //     }
-
-    //     this.setState({
-    //         active: this.state.active
-    //     })
-    // }
 
     nextOne() {
         if (this.state.active < this.state.max - 1) {
@@ -93,19 +58,19 @@ class Slider extends Component {
 
     setSliderStyles() {
 
-        const transition = this.state.active * - 100 / this.state.slides.length;
+        const transition = this.state.active * - 100 / this.state.slider.length;
 
         return {
-            width: (this.state.slides.length * 100) + '%',
+            width: (this.state.slider.length * 100) + '%',
             transform: `translateX(${transition}%)`
         }
     }
 
-    renderSlides() {
+    renderslider() {
         
-        const transition = 100 / this.state.slides.length + '%';
+        const transition = 100 / this.state.slider.length + '%';
 
-        return this.state.slides.map((item, index) => (
+        return this.state.slider.map((item, index) => (
             <div
                 className= "each-slide slide" 
                 key = {index} 
@@ -121,7 +86,7 @@ class Slider extends Component {
     }
 
     renderDots() {
-        return this.state.slides.map((item, index) => (
+        return this.state.slider.map((item, index) => (
             <li
             className = {this.isActive(index) + ' dots'}
             key = {index}
@@ -163,7 +128,7 @@ class Slider extends Component {
                 <div className="slider">
                     <div className="wrapper"
                     style = {this.setSliderStyles()}>
-                        {this.renderSlides()}>
+                        {this.renderslider()}>
                     </div>
 
                     {this.renderArrows()}
@@ -177,4 +142,10 @@ class Slider extends Component {
     };
 }
 
-export default Slider;
+function mapStateToProps(state) {
+    return {
+        slider: state.slideInfo.slider
+    }
+}
+
+export default connect(mapStateToProps)(Slider);
