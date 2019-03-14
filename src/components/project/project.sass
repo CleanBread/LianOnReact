@@ -3,16 +3,72 @@
         display: flex
         flex-direction: column
         .prev-next
-            margin: 10px 120px
+            margin: 50px 120px
             position: relative
-            .prev
-                display: inline-block
+            display: flex
+            align-items: center
+            .pr
                 position: absolute
                 left: 0
+            .nx
+                position: absolute
+                left: 200px
+            .arrow-prev
+                display: inline-block
+                position: relative
+                height: 20px
+                width: 20px
+            .arrow-prev::before
+                position: absolute
+                display: inline-block
+                content: ''
+                background: black
+                width: 7px
+                height: 1.5px
+                top: 50%
+                transform: rotate(-45deg)
+            .arrow-prev::after
+                position: absolute
+                display: inline-block
+                content: ''
+                background: black
+                width: 7px
+                height: 1.5px
+                top: 74%
+                transform: rotate(45deg)
+            .arrow-next
+                display: inline-block
+                position: relative
+                height: 20px
+                width: 20px
+            .arrow-next::before
+                position: absolute
+                display: inline-block
+                content: ''
+                background: black
+                width: 7px
+                height: 1.5px
+                top: 50%
+                right: 0
+                transform: rotate(45deg)
+            .arrow-next::after
+                right: 0
+                position: absolute
+                display: inline-block
+                content: ''
+                background: black
+                width: 7px
+                height: 1.5px
+                top: 74%
+                transform: rotate(-45deg)
+            .prev
+                display: inline-block
+                margin-left: 5px
+                color: black
             .next
                 display: inline-block
-                position: absolute
-                left: 100px
+                margin-right: 5px
+                color: black
     &__inf-container
         display: flex
         margin: 40px 120px

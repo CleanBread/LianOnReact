@@ -37,8 +37,8 @@ class Project extends Component {
 
     upd() {
         
-        let prev = document.querySelector('.prev');
-        let next = document.querySelector('.next');
+        let prev = document.querySelector('.pr');
+        let next = document.querySelector('.nx');
 
         +this.props.match.params.number === 0 ? prev.style.display = 'none' : prev.style.display = 'inline-block';
 
@@ -59,19 +59,18 @@ class Project extends Component {
         this.upd();
     };
 
-    componentWillUnmount() {
-    }
-
     render() {
         return (
             <div className="project__container">
                 <Title image={`url(${title_img})`} headline="LATEST PROJECTS" sent="We Deliver Quality"/>
                 <div className="prev-next">
-                    <Link to={`/portfolio/${+this.props.match.params.number - 1}`} onClick={this.prev}>
+                    <Link to={`/portfolio/${+this.props.match.params.number - 1}`} onClick={this.prev} className="pr">
+                        <span className="arrow-prev"></span>
                         <span className="prev">PREVIOUS</span>
                     </Link>
-                    <Link to={`/portfolio/${+this.props.match.params.number + 1}`} onClick={this.next}>
+                    <Link to={`/portfolio/${+this.props.match.params.number + 1}`} onClick={this.next} className="nx">
                         <span className="next">NEXT</span>
+                        <span className="arrow-next"></span>
                     </Link>
                 </div>
                 <div className="project__inf-container">
