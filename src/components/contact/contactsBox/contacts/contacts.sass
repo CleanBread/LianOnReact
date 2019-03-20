@@ -1,7 +1,6 @@
 .contacts
     display: flex
     flex-direction: column
-    width: 33.333%
     &__headline
         font-family: RobotoLight
         font-size: 30px
@@ -19,3 +18,17 @@
         height: 2px
         background: black
         margin-bottom: 10px
+@media (max-width: 850px)
+    .contacts
+        &__headline
+            text-align: center
+        &__subheading
+            text-align: center
+        &__line
+            width: 100%
+@media (max-width: 410px)
+    .contacts
+        &__headline
+            font-size: 26px
+        &__subheading
+            font-size: 13px

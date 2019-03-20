@@ -5,6 +5,10 @@
     float: left
     background-size: cover
     width: 100%
+    background-size: contain
+    background-repeat: no-repeat
+    background-position: 100%
+    background-color: #f2f2f3
     &__content
         margin-left: 120px
         text-transform: uppercase
@@ -20,3 +24,28 @@
         span
             margin: 0 45px
             letter-spacing: 2px
+@media (max-width: 1400px)
+    .title
+        &__content
+            margin-left: 80px
+@media (max-width: 1020px)
+    .title
+        &__content
+            margin-left: 50px
+@media (max-width: 790px)
+    .title
+        &__content
+            margin: auto
+@media (max-width: 670px)
+    .title
+        background-size: auto
+        &__headline
+            font-size: 40px
+@media (max-width: 470px)
+    .title
+        background-position: 80%
+        &__headline
+            font-size: 35px
+@media (max-width: 400px)
+    .title
+        background-position: 60%

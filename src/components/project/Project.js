@@ -32,7 +32,6 @@ class Project extends Component {
 
     componentDidUpdate() {
         this.upd()
-        console.log("did upd " + this.props.match.params.number)
     }
 
     upd() {

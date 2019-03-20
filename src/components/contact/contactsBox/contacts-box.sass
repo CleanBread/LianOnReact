@@ -1,3 +1,19 @@
 .contacts-box
     display: flex
     margin: 50px 120px
+    justify-content: space-between
+
+@media (max-width: 1400px)
+    .contacts-box
+        margin: 50px 80px
+@media (max-width: 1020px)
+    .contacts-box
+        margin: 50px 50px
+@media (max-width: 1250px)
+    .form__inputs
+        flex-direction: column
+        .input:first-child
+            margin-bottom: 40px
+@media (max-width: 850px)
+    .contacts-box
+        flex-direction: column
