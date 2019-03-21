@@ -8,7 +8,7 @@ class Skills extends Component {
     render() {
         return (
             <div className="skills-box">
-                <Subheading subheading="Our SKills"/>
+                <Subheading subheading="Our SKills" className="sub"/>
                 <Skill skillName="Photoshop" skillProc="90"/>
                 <Skill skillName="Branding" skillProc="95"/>
                 <Skill skillName="Photography" skillProc="50"/>

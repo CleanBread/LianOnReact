@@ -7,6 +7,7 @@
     &__photo
         height: 480px
         background-size: cover
+        background-repeat: no-repeat
         background-position: 50% 50%
     &__inf
         display: flex
@@ -30,3 +31,17 @@
             color: #989898
             line-height: 25px
             width: 82%
+@media (max-width: 1000px)
+    .person
+        width: 100%
+        &__photo
+            background-position: 50% 0%
+            background-size: 100%
+@media (max-width: 500px)
+    .person
+        &__photo
+            height: 350px
+@media (max-width: 400px)
+    .person
+        &__photo
+            height: 250px
