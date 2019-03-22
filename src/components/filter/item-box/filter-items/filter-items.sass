@@ -1,7 +1,7 @@
 .filter-item
     width: 31.6933%
     height: 300px
-    margin: 10px
+    margin-bottom: 15px
     background-size: cover
     background-position: 50% 50%
     .item-active
@@ -10,7 +10,6 @@
         height: 100%
         transition: .5s
         position: relative
-        // cursor: pointer
         .gor
             display: inline-block
             width: 55px
@@ -31,3 +30,18 @@
     .item-active:hover
         opacity: 1
         background-color: rgba(0, 0, 0, 0.55)
+@media (max-width: 1150px)
+    .filter-item
+        height: 250px
+@media (max-width: 850px)
+    .filter-item
+        height: 200px
+@media (max-width: 650px)
+    .filter-item
+        height: 150px
+@media (max-width: 500px)
+    .filter-item
+        height: 100px
+@media (max-width: 500px)
+    .filter-item
+        height: 100px

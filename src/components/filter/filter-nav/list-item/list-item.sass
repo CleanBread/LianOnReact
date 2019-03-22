@@ -1,14 +1,14 @@
 .nav-list-item
+    margin-left: -2px
     text-decoration: none
     display: inline-block
     text-transform: uppercase
     font-size: 18px
     transform: skewX(-25deg)
     border-right: 2px solid #ebebeb
+    border-left: 2px solid #ebebeb
     padding: 7px 0
     cursor: pointer
-    &:last-child
-        border: none
     span
         display: block
         transform: skewX(25deg)
@@ -16,3 +16,14 @@
 
 .active
     color: black
+@media (max-width: 1130px)
+    .nav-list-item
+        font-size: 15px
+@media (max-width: 980px)
+    .nav-list-item
+        font-size: 13px
+        span
+            margin: 0 20px
+@media (max-width: 450px)
+    .nav-list-item
+        border: none
