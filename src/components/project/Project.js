@@ -61,7 +61,7 @@ class Project extends Component {
     render() {
         return (
             <div className="project__container">
-                <Title image={`url(${title_img})`} headline="LATEST PROJECTS" sent="We Deliver Quality"/>
+                <Title image={`url(${title_img})`} color={'#e2e2e2'} headline="LATEST PROJECTS" sent="We Deliver Quality"/>
                 <div className="prev-next">
                     <Link to={`/portfolio/${+this.props.match.params.number - 1}`} onClick={this.prev} className="pr">
                         <span className="arrow-prev"></span>

@@ -123,5 +123,67 @@
             width: 40%
             height: 500px
             background-size: cover
-
-
+@media (max-width: 1400px)
+    .project
+        &__inf-container
+            margin: 40px 80px
+        &__container
+            .prev-next
+                margin: 50px 80px 20px
+@media (max-width: 1020px)
+    .project
+        &__inf-container
+            margin: 40px 50px
+        &__container
+            .prev-next
+                margin: 50px 30px 20px
+@media (max-width: 1000px)
+    .project
+        &__inf-container
+            flex-direction: column-reverse
+            .image
+                width: 100%
+                margin-bottom: 25px
+            .inf
+                width: 100%
+                padding: 0
+@media (max-width: 600px)
+    .project
+        &__inf-container
+            .inf
+                &__head
+                    .headline
+                        font-size: 25px
+@media (max-width: 500px)
+    .project
+        &__inf-container
+            .inf
+                &__head
+                    .headline
+                        font-size: 20px
+@media (max-width: 550px)
+    .project
+        &__inf-container
+            .image
+                height: 400px
+@media (max-width: 450px)
+    .project
+        &__inf-container
+            .image
+                height: 300px
+@media (max-width: 400px)
+    .project
+        &__inf-container
+            .image
+                height: 250px
+            .inf
+                &__head
+                    .headline
+                        font-size: 16px
+                    .sub
+                        font-size: 14px
+@media (max-width: 360px)
+    .project
+        &__inf-container
+            .image
+                height: 250px
